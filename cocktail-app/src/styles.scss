@@ -1,0 +1,34 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+h1 {
+    font-size: var(--font-size-lg);
+    font-weight: bold;
+}
+
+h2 {
+    font-size: var(--font-size-md);
+}
+
+:root {
+    --primary: #254336;
+    --secondary: #6B8A7A;
+    --thirdary: #B7B597;
+    --fourth: #DAD3BE;
+
+    --spacing-none: 0;
+    --spacing-xxs: 4px;
+    --spacing-xs: 8px;
+    --spacing-sm: 16px;
+    --spacing-md: 24px;
+    --spacing-lg: 42px;
+    --spacing-xl: 84px;
+
+    --font-size-xxs: 12px;
+    --font-size-xs: 18px;
+    --font-size-sm: 24px;
+    --font-size-md: 32px;
+    --font-size-lg: 64px;
+}

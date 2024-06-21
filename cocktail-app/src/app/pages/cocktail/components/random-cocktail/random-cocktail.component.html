@@ -1,0 +1,27 @@
+<div class="container">
+    <h1>Cocktail Factory</h1>
+
+    @defer(when (cocktail$ | async)) {
+      <div>
+        <img [src]="(cocktail$ | async).strDrinkThumb" alt="Image du Cocktail" class="cocktail-image" />
+    
+          <h2>{{ (cocktail$ | async).strDrink }}</h2>
+    
+          <div>
+            <button mat-flat-button (click)="openRecipe()" class="recipe">
+              See the recipe
+            </button>
+            <button mat-flat-button (click)="getRandomCocktail()" class="other">
+              Another cocktail
+            </button>
+          </div>
+      </div>
+    }@placeholder {
+      <p>Loading...</p>
+    }@error {
+      <div>
+        <p class="error">Error: {{ error$ | async }}</p>
+      </div>
+    }
+</div>
+  

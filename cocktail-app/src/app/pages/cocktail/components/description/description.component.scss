@@ -1,0 +1,15 @@
+
+.recipe {
+    padding: var(--spacing-sm);
+    background-color: var(--secondary);
+    color: var(--fourth);
+    font-size: var(--font-size-xs);
+
+    mat-icon {
+        float: right;
+    }
+    h3 {
+        font-size: var(--font-size-sm);
+    }
+}
+
