@@ -44,10 +44,4 @@ describe('RandomCocktailComponent', () => {
     component.ngOnInit();
     expect(dispatchSpy).toHaveBeenCalledWith(CocktailActions.loadRandomCocktail());
   });
-
-  it('should toggle showRecipe', () => {
-    component.showRecipe = false;
-    component.openRecipe();
-    expect(component.showRecipe).toBe(true);
-  });
 });

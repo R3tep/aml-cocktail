@@ -21,7 +21,6 @@ import {MatDividerModule} from '@angular/material/divider';
 export class RandomCocktailComponent implements OnInit {
   cocktail$: Observable<Cocktail>;
   error$: Observable<Error>;
-  showRecipe: boolean = false;
 
   constructor(private store: Store, public dialog: MatDialog) {
     this.cocktail$ = this.store.select(fromCocktail.selectCocktail);
@@ -34,12 +33,9 @@ export class RandomCocktailComponent implements OnInit {
 
   getRandomCocktail(): void {
     this.store.dispatch(CocktailActions.loadRandomCocktail());
-    this.showRecipe = false;
   }
 
   openRecipe(): void {
-    this.showRecipe = !this.showRecipe;
-
     this.dialog.open(DescriptionComponent, {
       data: { cocktail$: this.cocktail$ }
     })
